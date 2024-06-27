@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "d5fe059f-d22c-4bfa-80cb-a9933340af22",
+		"name": "SP-PROGRA3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34176678"
+	},
+	"item": [
+		{
+			"name": "TiendaAlta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "marca",
+							"value": "Lorenzo",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "400",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "impresora",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "hp",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "gris",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "450_1000.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/tienda/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"tienda",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TiendaConsultar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "marca",
+							"value": "Gremlin",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "impresora",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "rojo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/tienda/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"tienda",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VentaAlta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "fiorella@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "marca",
+							"value": "samsung",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "impresora",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "hp",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2024-03-05",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "hola.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/ventas/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TiendaListarProductos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "marca",
+							"value": "hp",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "250",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tipo",
+							"value": "cartucho",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "modelo",
+							"value": "664",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "color",
+							"value": "negro",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock",
+							"value": "50",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "imagen",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/tienda/listarProductos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"tienda",
+						"listarProductos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VentasPorFecha",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/productos/vendidos?fecha=2024-03-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"productos",
+						"vendidos"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2024-03-03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VentasPorUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/ventas/porUsuario?email=fiorella@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"ventas",
+						"porUsuario"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "fiorella@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VentasPorTipoProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/ventas/porProducto?tipo=cartucho",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"ventas",
+						"porProducto"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "cartucho"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductosEntreDosValores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/productos/entreValores?valor1=360&valor2=4500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"productos",
+						"entreValores"
+					],
+					"query": [
+						{
+							"key": "valor1",
+							"value": "360"
+						},
+						{
+							"key": "valor2",
+							"value": "4500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GananciasDeVentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/ventas/ingresos?fecha=2024-03-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"ventas",
+						"ingresos"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2024-03-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductoMasVendido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/ventas/consultar/productos/masVendido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"consultar",
+						"productos",
+						"masVendido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarVenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroDePedido\": \"667b0ad696a6e\",\r\n  \"email\": \"fiorella@gmail.com\",\r\n  \"marca\": \"Mudi\",\r\n  \"tipo\": \"impresora\",\r\n  \"modelo\": \"hp\",\r\n  \"cantidad\": 16\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/ventas/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"ventas",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisroUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "juan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "juan",
+							"type": "text"
+						},
+						{
+							"key": "contraseña",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "hola.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/usuarios/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "juan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "contrasena",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
